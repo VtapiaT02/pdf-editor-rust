@@ -1,11 +1,11 @@
 [package]
 name = "pdf-editor"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
 lopdf = "0.31.0"        # Para manipular PDFs
-pdfium-render = "0.8.0" # Para renderizado PDF (opcional si solo manipulas)
+pdfium-render = { version = "0.7.24", features = ["pdfium-binary-static"] }
 tauri = { version = "1.5", optional = true } # UI opcional
 egui = { version = "0.27", optional = true } # Alternativa a Tauri
 log = "0.4"
